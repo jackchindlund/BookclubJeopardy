@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Custom Jeopardy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand__title">CUSTOM JEOPARDY</div>
+      <div class="brand__subtitle">Host + Buzzers (Realtime)</div>
+    </div>
+    <div class="roompill" id="roomPill" hidden>
+      Room: <span id="roomCodeText">----</span>
+    </div>
+  </header>
+
+  <main class="app">
+
+    <!-- Landing -->
+    <section class="screen" id="screenLanding">
+      <div class="card panel">
+        <h1>Ready to play?</h1>
+        <p class="muted">
+          Run the host on the Chromebook. Players join on their phones as buzzers + scoreboards.
+        </p>
+
+        <div class="btnrow">
+          <button class="btn primary" id="btnGoHost">Host Game</button>
+          <button class="btn" id="btnGoJoin">Join Game</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Host setup -->
+    <section class="screen" id="screenHostSetup" hidden>
+      <div class="card panel">
+        <h2>Host Setup</h2>
+        <p class="muted">This creates a room code and loads your board from <code>questions.json</code>.</p>
+
+        <div class="btnrow">
+          <button class="btn primary" id="btnCreateRoom">Create Room</button>
+          <button class="btn ghost" id="btnBackFromHostSetup">Back</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+          <div class="field">
+            <label>Room Code (after create)</label>
+            <div class="bigcode" id="hostRoomCode">----</div>
+          </div>
+        </div>
+
+        <div class="muted small">
+          Tip: Share the room code. Players open this same site, tap “Join Game”, enter the code.
+        </div>
+      </div>
+    </section>
+
+    <!-- Join setup -->
+    <section class="screen" id="screenJoinSetup" hidden>
+      <div class="card panel">
+        <h2>Join Game</h2>
+        <p class="muted">Enter the room code the host sees, choose Team 1 or Team 2, set a name.</p>
+
+        <div class="grid2">
+          <div class="field">
+            <label>Room Code</label>
+            <input id="joinRoomCode" placeholder="e.g. JEP-4821" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label>Your Name</label>
+            <input id="joinPlayerName" placeholder="e.g. Jack" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Choose Team</label>
+          <div class="btnrow">
+            <button class="btn" id="btnPickTeam1">Team 1</button>
+            <button class="btn" id="btnPickTeam2">Team 2</button>
+          </div>
+          <div class="muted small" id="teamPickNote">No team selected yet.</div>
+        </div>
+
+        <div class="btnrow">
+          <button class="btn primary" id="btnJoinRoom" disabled>Join Room</button>
+          <button class="btn ghost" id="btnBackFromJoinSetup">Back</button>
+        </div>
+
+        <div class="error" id="joinError" hidden></div>
+      </div>
+    </section>
+
+    <!-- Host game -->
+    <section class="screen" id="screenHostGame" hidden>
+      <div class="hosthud">
+        <div class="hudleft">
+          <div class="scores">
+            <div class="scorebox">
+              <div class="scorebox__label" id="team1Label">Team 1</div>
+              <div class="scorebox__score" id="team1Score">0</div>
+            </div>
+            <div class="scorebox">
+              <div class="scorebox__label" id="team2Label">Team 2</div>
+              <div class="scorebox__score" id="team2Score">0</div>
+            </div>
+          </div>
+
+          <div class="buzzstatus">
+            <div class="pill" id="buzzPill">Buzz: <span id="buzzText">—</span></div>
+            <button class="btn small" id="btnResetBuzz">Reset Buzz</button>
+          </div>
+        </div>
+
+        <div class="hudright">
+          <div class="timer">
+            <div class="timer__label">Timer</div>
+            <div class="timer__value" id="timerValue">20</div>
+          </div>
+          <div class="btnrow">
+            <button class="btn small" id="btnTimerReset">Reset Timer</button>
+            <button class="btn small ghost" id="btnHostEndRoom">End Room</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="boardwrap">
+        <div class="board" id="board"></div>
+      </div>
+    </section>
+
+    <!-- Player game -->
+    <section class="screen" id="screenPlayerGame" hidden>
+      <div class="card panel">
+        <div class="playerTop">
+          <div>
+            <div class="muted small">Room</div>
+            <div class="bigcode inline" id="playerRoomCode">----</div>
+          </div>
+          <div>
+            <div class="muted small">Your Team</div>
+            <div class="teamtag" id="playerTeamTag">—</div>
+          </div>
+        </div>
+
+        <div class="scores playerScores">
+          <div class="scorebox">
+            <div class="scorebox__label" id="pTeam1Label">Team 1</div>
+            <div class="scorebox__score" id="pTeam1Score">0</div>
+          </div>
+          <div class="scorebox">
+            <div class="scorebox__label" id="pTeam2Label">Team 2</div>
+            <div class="scorebox__score" id="pTeam2Score">0</div>
+          </div>
+        </div>
+
+        <div class="playerMid">
+          <div class="timer playerTimer">
+            <div class="timer__label">Timer</div>
+            <div class="timer__value" id="pTimerValue">20</div>
+          </div>
+
+          <div class="pill wide" id="pBuzzStatus">Buzz status: <span id="pBuzzText">Waiting…</span></div>
+        </div>
+
+        <button class="buzzbtn" id="btnBuzz" disabled>BUZZ</button>
+
+        <div class="muted small center">
+          Buzz opens only while the question is live and nobody has buzzed yet.
+        </div>
+
+        <div class="btnrow">
+          <button class="btn ghost" id="btnLeaveRoom">Leave</button>
+        </div>
+
+        <div class="error" id="playerError" hidden></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Center clue modal -->
+  <div class="modal" id="clueModal" hidden>
+    <div class="modal__overlay" id="modalOverlay"></div>
+
+    <div class="cluecard" id="clueCard">
+      <div class="cluecard__inner" id="clueInner">
+        <div class="clueface clueface--front">
+          <div class="clueface__top">
+            <div class="clueface__meta" id="clueMeta">Category • $100</div>
+            <div class="clueface__phase" id="cluePhase">QUESTION</div>
+          </div>
+          <div class="clueface__content" id="clueText">Question text…</div>
+          <div class="clueface__hint">Tap to reveal answer</div>
+        </div>
+
+        <div class="clueface clueface--back">
+          <div class="clueface__top">
+            <div class="clueface__meta" id="ansMeta">Category • $100</div>
+            <div class="clueface__phase">ANSWER</div>
+          </div>
+          <div class="clueface__content" id="ansText">Answer text…</div>
+
+          <div class="scoreActions">
+            <div class="muted small center">Host scoring</div>
+            <div class="btnrow center">
+              <button class="btn small" id="btnAwardT1">+ Team 1</button>
+              <button class="btn small" id="btnAwardT2">+ Team 2</button>
+              <button class="btn small ghost" id="btnPenaltyT1">- Team 1</button>
+              <button class="btn small ghost" id="btnPenaltyT2">- Team 2</button>
+            </div>
+
+            <div class="btnrow center">
+              <button class="btn primary" id="btnReturnToBoard">Return to Board</button>
+            </div>
+
+            <div class="muted small center">
+              Return marks this clue as used.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase (CDN) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
