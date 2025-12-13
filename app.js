@@ -473,8 +473,14 @@
   const ansText = $("ansText");
 
   function openClueModal(clueKey, phase) {
-    const clue = appState.boardIndex.get(clueKey);
-    if (!clue) return;
+  // HARD GUARD: never open modal unless host with active room
+  if (
+    appState.mode !== "host" ||
+    !appState.roomData ||
+    !appState.roomData.activeClueKey
+  ) {
+    return;
+  
 
     appState.activeClueKey = clueKey;
     appState.activeClue = clue;
