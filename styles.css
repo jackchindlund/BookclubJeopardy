@@ -22,6 +22,10 @@ body{
   color: var(--white);
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .topbar{
   display:flex;
   align-items:center;
