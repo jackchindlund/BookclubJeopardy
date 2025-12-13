@@ -573,6 +573,30 @@
       $("buzzText") && ($("buzzText").textContent = `${label} buzzed first`);
     }
 
+     // --- Move buzz display under the open clue ---
+const clueBuzz = $("clueBuzz");
+const clueBuzzText = $("clueBuzzText");
+const buzzPill = $("buzzPill");
+
+if (room.phase !== "board") {
+  // Card is open → show buzz under card, hide side buzz
+  if (buzzPill) buzzPill.hidden = true;
+
+  if (clueBuzz) {
+    clueBuzz.hidden = false;
+    if (buzzTeam) {
+      const label = buzzTeam === "team1" ? t1n : t2n;
+      clueBuzzText.textContent = label;
+    } else {
+      clueBuzzText.textContent = "—";
+    }
+  }
+} else {
+  // Board view → show side buzz, hide card buzz
+  if (buzzPill) buzzPill.hidden = false;
+  if (clueBuzz) clueBuzz.hidden = true;
+}
+
     // Update board used UI
     updateBoardUsedUI();
 
