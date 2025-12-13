@@ -70,6 +70,20 @@ body{
   min-height: calc(100vh - 100px);
 }
 
+.clueBuzz {
+  margin: 8px auto 12px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  width: fit-content;
+  background: rgba(246,197,74,.18);
+  border: 1px solid rgba(246,197,74,.45);
+  color: rgba(246,197,74,.95);
+  font-weight: 1000;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .card.panel{
   width:min(820px, 100%);
   padding: 22px 22px 18px;
