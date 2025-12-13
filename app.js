@@ -473,47 +473,46 @@
   const ansText = $("ansText");
 
   function openClueModal(clueKey, phase) {
-  // HARD GUARD: never open modal unless host with active room
+  // HARD GUARD: modal only allowed for host with active room
   if (
     appState.mode !== "host" ||
     !appState.roomData ||
-    !appState.roomData.activeClueKey
+    !clueKey
   ) {
     return;
-  
-
-    appState.activeClueKey = clueKey;
-    appState.activeClue = clue;
-
-    clueMeta.textContent = `${clue.categoryTitle} • $${clue.value}`;
-    ansMeta.textContent = `${clue.categoryTitle} • $${clue.value}`;
-
-    cluePhase.textContent = "QUESTION";
-    clueText.textContent = clue.question;
-    ansText.textContent = clue.answer;
-
-    clueInner.classList.remove("flipped");
-    clueModal.hidden = false;
-
-    // Clicking the card flips to answer (host)
-    $("clueCard").onclick = async () => {
-      if (appState.mode !== "host") return;
-      const room = appState.roomData;
-      if (!room) return;
-
-      // Only allow flip if in question phase (or already answer)
-      if (room.phase === "question") {
-        // set DB phase to answer, flip UI
-        await appState.roomRef.update({ phase: "answer" });
-        clueInner.classList.add("flipped");
-      }
-    };
-
-    // Overlay click does nothing until answer is shown; return button closes.
-    $("modalOverlay").onclick = () => {
-      // do nothing (keeps it controlled)
-    };
   }
+
+  const clue = appState.boardIndex.get(clueKey);
+  if (!clue) return;
+
+  appState.activeClueKey = clueKey;
+  appState.activeClue = clue;
+
+  clueMeta.textContent = `${clue.categoryTitle} • $${clue.value}`;
+  ansMeta.textContent = `${clue.categoryTitle} • $${clue.value}`;
+
+  cluePhase.textContent = "QUESTION";
+  clueText.textContent = clue.question;
+  ansText.textContent = clue.answer;
+
+  clueInner.classList.remove("flipped");
+  clueModal.hidden = false;
+
+  // Clicking the card flips to answer (host)
+  $("clueCard").onclick = async () => {
+    if (appState.mode !== "host") return;
+    const room = appState.roomData;
+    if (!room) return;
+
+    if (room.phase === "question") {
+      await appState.roomRef.update({ phase: "answer" });
+      clueInner.classList.add("flipped");
+    }
+  };
+
+  // Overlay intentionally does nothing
+  $("modalOverlay").onclick = () => {};
+}
 
   function closeClueModal() {
     clueModal.hidden = true;
