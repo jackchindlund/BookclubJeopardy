@@ -5,43 +5,43 @@
       "clues": [
         {
           "value": 100,
-          "question": "In \"God of the Woods\", what year does Bear go missing?",
+          "question": "In \"God of the Woods\", what year does “Bear” go missing?",
           "answer": "1961"
         },
         {
           "value": 200,
-          "question": "In \"Bury Our Bones in the Midnight Soil\", Jocelyn is to Charlotte who?",
-          "answer": "Her childhood best friend and first love"
-        },
-        {
-          "value": 300,
-          "question": "This novel features a struggling author who ghostwrites for a famous novelist and discovers sinister secrets.",
-          "answer": "Verity"
-        },
-        {
-          "value": 400,
           "question": "Charlie and Eve move to a home on the side of a mountain nicknamed this in \"We Used to Live Here\".",
           "answer": "Stray Dog Summit"
         },
         {
+          "value": 300,
+          "question": "In \"The Frozen River\", whenever Martha enters Dr. Coleman’s shop, she is hoping not to see this on the counter.",
+          "answer": "A silver fox pelt"
+        },
+        {
+          "value": 400,
+          "question": "In \"Stillhouse Lake\", Gwen does daily internet research into what internet trolls are saying about her family. What does she refer to this research as?",
+          "answer": "Sicko Patrol"
+        },
+        {
           "value": 500,
-          "question": "In \"The Seven Year Slip\", Rhonda is to Clementine who?",
-          "answer": "Her boss"
+          "question": "In \"The Women\" by Kristin Hannah, Frankie goes to recover and get sober after hitting rock bottom at a ranch in this state.",
+          "answer": "Montana"
         }
       ]
     },
     {
-      "title": "Relatives & Relationships",
+      "title": "Relatives and Relationships",
       "clues": [
         {
           "value": 100,
-          "question": "These men were accused of raping Rebecca Foster.",
-          "answer": "Joseph North and Joshua Burgess"
+          "question": "In \"Bury Our Bones in the Midnight Soil\", Jocelyn is to Charlotte who?",
+          "answer": "Her childhood best friend and first love"
         },
         {
           "value": 200,
-          "question": "Matteo’s human lover in the novel is named who?",
-          "answer": "Alessandro"
+          "question": "In \"The Seven Year Slip\", Rhonda is to Clementine who?",
+          "answer": "Her boss"
         },
         {
           "value": 300,
@@ -50,13 +50,13 @@
         },
         {
           "value": 400,
-          "question": "In \"The Frozen River\", Martha hopes not to see this on Dr. Coleman’s counter.",
-          "answer": "A silver fox pelt"
+          "question": "In \"God of the Woods\", Tracy is to Barbara who?",
+          "answer": "Her summer camp bunkmate"
         },
         {
           "value": 500,
-          "question": "Frankie’s older brother who is killed in action is named who?",
-          "answer": "Finley McGrath"
+          "question": "In \"We Are Legion\", Andrea is to Alaina who?",
+          "answer": "Her sister"
         }
       ]
     },
@@ -65,28 +65,28 @@
       "clues": [
         {
           "value": 100,
-          "question": "This director and star of \"It Ends With Us\" was engaged in a lawsuit with Blake Lively.",
+          "question": "This director and star in the film \"It Ends With Us\" was engaged in a lawsuit with costar Blake Lively.",
           "answer": "Justin Baldoni"
         },
         {
           "value": 200,
-          "question": "In \"Twilight: New Moon\", the line “Where the hell have you BEEN, Loca?” is spoken by this actor.",
+          "question": "In the second installment of \"The Twilight Saga: New Moon\", the famous line “Where the hell have you BEEN, Loca?” is spoken by this actor.",
           "answer": "Taylor Lautner"
         },
         {
           "value": 300,
-          "question": "Sam Claflin plays Finnick Odair and also this character in \"Daisy Jones & The Six\".",
-          "answer": "Billy Dunne"
+          "question": "In what film does a character with lavender hair exclaim, “That is Mahogany!!”?",
+          "answer": "The Hunger Games"
         },
         {
           "value": 400,
-          "question": "The HBO series \"Game of Thrones\" is based on this book series.",
-          "answer": "A Song of Ice and Fire"
+          "question": "Sam Claflin plays Finnick Odair in \"The Hunger Games\" and this character in the Amazon Prime series \"Daisy Jones & The Six\".",
+          "answer": "Billy Dunne"
         },
         {
           "value": 500,
-          "question": "In which film does a character with lavender hair exclaim, “That is Mahogany!”?",
-          "answer": "The Hunger Games"
+          "question": "The HBO Max series \"Game of Thrones\" is based on this book series by George R. R. Martin.",
+          "answer": "A Song of Ice and Fire"
         }
       ]
     },
@@ -95,27 +95,27 @@
       "clues": [
         {
           "value": 100,
-          "question": "This book follows a huntress traveling through a magical realm to atone for a crime.",
-          "answer": "A Court of Thorns and Roses"
+          "question": "This novel features a struggling author who ghostwrites for a famous novelist and discovers sinister secrets about their employer.",
+          "answer": "Verity"
         },
         {
           "value": 200,
-          "question": "This Kristin Hannah novel takes place in America’s “Last Frontier.”",
-          "answer": "The Great Alone"
+          "question": "This book, the first in a series, follows a huntress through a magical realm to atone for a crime she committed at the beginning of the story.",
+          "answer": "A Court of Thorns and Roses"
         },
         {
           "value": 300,
-          "question": "In \"Stillhouse Lake\", Gwen refers to her internet research on trolls by this name.",
-          "answer": "Sicko Patrol"
+          "question": "In this Kristin Hannah novel, the main character moves to America’s “Last Frontier” with their abusive father and co-dependent mother.",
+          "answer": "The Great Alone"
         },
         {
           "value": 400,
-          "question": "This finale novel concludes a multi-book fantasy series with a world-ending battle.",
+          "question": "This finale novel in a multi-book fantasy series ends with a battle that determines the fate of the world.",
           "answer": "Kingdom of Ash"
         },
         {
           "value": 500,
-          "question": "In this 2023 release, the protagonist is forced into a brutal war college with deadly trials.",
+          "question": "In this 2023 release, the protagonist is forced to join a war college where they face deadly challenges, beasts, and combat.",
           "answer": "Fourth Wing"
         }
       ]
@@ -125,23 +125,23 @@
       "clues": [
         {
           "value": 100,
-          "question": "In \"The Women\", Frankie recovers at a ranch located in this state.",
-          "answer": "Montana"
+          "question": "These men were accused of raping Rebecca Foster.",
+          "answer": "Joseph North and Joshua Burgess"
         },
         {
           "value": 200,
-          "question": "In \"We Are Legion\", Andrea is to Alaina who?",
-          "answer": "Her sister"
+          "question": "Matteo’s human lover is named who?",
+          "answer": "Alessandro"
         },
         {
           "value": 300,
-          "question": "In \"God of the Woods\", Tracy is to Barbara who?",
-          "answer": "Her summer camp bunkmate"
+          "question": "Gwen purchases a vehicle from this man who works at the gun range.",
+          "answer": "Javier “Javi” Esparza"
         },
         {
           "value": 400,
-          "question": "Gwen purchases a vehicle from this man who works at the gun range.",
-          "answer": "Javier “Javi” Esparza"
+          "question": "Frankie’s older brother, who is killed in action, is named who?",
+          "answer": "Finley McGrath"
         },
         {
           "value": 500,
