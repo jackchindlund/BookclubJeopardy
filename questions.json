@@ -5,13 +5,13 @@
       "clues": [
         {
           "value": 100,
-          "question": "In \"God of the Woods\", what year does “Bear” go missing?",
-          "answer": "1961"
+          "question": "Charlie and Eve move to a home on the side of a mountain nicknamed this in \"We Used to Live Here\".",
+          "answer": "Stray Dog Summit"
         },
         {
           "value": 200,
-          "question": "Charlie and Eve move to a home on the side of a mountain nicknamed this in \"We Used to Live Here\".",
-          "answer": "Stray Dog Summit"
+          "question": "In \"The Women\" by Kristin Hannah, Frankie goes to recover and get sober after hitting rock bottom at a ranch in this state.",
+          "answer": "Montana"
         },
         {
           "value": 300,
@@ -25,8 +25,8 @@
         },
         {
           "value": 500,
-          "question": "In \"The Women\" by Kristin Hannah, Frankie goes to recover and get sober after hitting rock bottom at a ranch in this state.",
-          "answer": "Montana"
+          "question": "In \"God of the Woods\", what year does “Bear” go missing?",
+          "answer": "1961"
         }
       ]
     },
@@ -35,8 +35,8 @@
       "clues": [
         {
           "value": 100,
-          "question": "In \"Bury Our Bones in the Midnight Soil\", Jocelyn is to Charlotte who?",
-          "answer": "Her childhood best friend and first love"
+          "question": "In \"Funny Story\", Jason is to Holly who?",
+          "answer": "Her husband"
         },
         {
           "value": 200,
@@ -45,8 +45,8 @@
         },
         {
           "value": 300,
-          "question": "In \"Funny Story\", Jason is to Holly who?",
-          "answer": "Her husband"
+          "question": "In \"Bury Our Bones in the Midnight Soil\", Jocelyn is to Charlotte who?",
+          "answer": "Her childhood best friend and first love"
         },
         {
           "value": 400,
@@ -70,23 +70,23 @@
         },
         {
           "value": 200,
-          "question": "In the second installment of \"The Twilight Saga: New Moon\", the famous line “Where the hell have you BEEN, Loca?” is spoken by this actor.",
+          "question": "In the second installment of the \"Twilight Saga\" (\"New Moon\"), the famous line “Where the hell have you BEEN, Loca??” is read by this actor.",
           "answer": "Taylor Lautner"
         },
         {
           "value": 300,
+          "question": "The HBO Max series \"Game of Thrones\" is based off of this book series by George R. R. Martin.",
+          "answer": "A Song of Ice and Fire"
+        },
+        {
+          "value": 400,
           "question": "In what film does a character with lavender hair exclaim, “That is Mahogany!!”?",
           "answer": "The Hunger Games"
         },
         {
-          "value": 400,
-          "question": "Sam Claflin plays Finnick Odair in \"The Hunger Games\" and this character in the Amazon Prime series \"Daisy Jones & The Six\".",
-          "answer": "Billy Dunne"
-        },
-        {
           "value": 500,
-          "question": "The HBO Max series \"Game of Thrones\" is based on this book series by George R. R. Martin.",
-          "answer": "A Song of Ice and Fire"
+          "question": "Sam Claflin plays Finnick Odair in the film adaptation of \"The Hunger Games\" series and this character in the Amazon Prime Video production of \"Daisy Jones & The Six\".",
+          "answer": "Billy Dunne"
         }
       ]
     },
@@ -95,33 +95,33 @@
       "clues": [
         {
           "value": 100,
-          "question": "This novel features a struggling author who ghostwrites for a famous novelist and discovers sinister secrets about their employer.",
+          "question": "This novel features a struggling author who takes a project ghostwriting for a famous novelist, and discovers sinister secrets about their new employer.",
           "answer": "Verity"
         },
         {
           "value": 200,
-          "question": "This book, the first in a series, follows a huntress through a magical realm to atone for a crime she committed at the beginning of the story.",
+          "question": "This book, the first in a series, follows a huntress through a magical realm, on her way to pay for a crime she committed at the beginning of the story.",
           "answer": "A Court of Thorns and Roses"
         },
         {
           "value": 300,
-          "question": "In this Kristin Hannah novel, the main character moves to America’s “Last Frontier” with their abusive father and co-dependent mother.",
+          "question": "In this Kristin Hannah novel, the main character moves to the rugged landscape of America’s “Last Frontier” with their abusive father and co-dependent mother.",
           "answer": "The Great Alone"
         },
         {
           "value": 400,
-          "question": "This finale novel in a multi-book fantasy series ends with a battle that determines the fate of the world.",
-          "answer": "Kingdom of Ash"
+          "question": "In this 2023 release, our protagonist is forced to join a war college where they face deadly challenges, beasts and combat.",
+          "answer": "Fourth Wing"
         },
         {
           "value": 500,
-          "question": "In this 2023 release, the protagonist is forced to join a war college where they face deadly challenges, beasts, and combat.",
-          "answer": "Fourth Wing"
+          "question": "In this finale novel to a multi-book series, our main character and their allies join forces in a battle that will determine the fate of their world.",
+          "answer": "Kingdom of Ash"
         }
       ]
     },
     {
-      "title": "Wait… What’s Their Name?",
+      "title": "Wait… What’s their name?",
       "clues": [
         {
           "value": 100,
@@ -145,7 +145,7 @@
         },
         {
           "value": 500,
-          "question": "Grace discovers the disappearance of this local woman.",
+          "question": "Grace discovers this missing local woman.",
           "answer": "Bri Becker"
         }
       ]
